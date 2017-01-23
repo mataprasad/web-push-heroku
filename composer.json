@@ -1,0 +1,6 @@
+{
+"require": {
+    "ext-gd": "*"
+  },
+"scripts": { "compile": [ "chmod 775 ./"] } 
+}
