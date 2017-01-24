@@ -5,6 +5,8 @@ $curl = curl_init($service_url);
 $curl_post_data = array(
         'token' => 'test message'
 );
+$str_json = file_get_contents('php://input');
+echo 'str_json'.$str_json;
 echo 'token'.$_POST['token'];
 echo '--data--'.$_POST['data'];
 $data = array("token" => "Hagrid");                                                                    
