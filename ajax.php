@@ -6,10 +6,15 @@ $curl_post_data = array(
         'token' => 'test message'
 );
 $str_json = file_get_contents('php://input');
-echo 'str_json'.$str_json;
+/*echo 'str_json'.$str_json;
 echo 'token'.$_POST['token'];
 echo '--data--'.$_POST['data'];
-$data = array("token" => "Hagrid");                                                                    
+$json = '{"foo-bar": 12345}';
+
+$obj_x = json_decode($str_json);
+print $obj->{'foo-bar'}; // 12345*/
+$obj_x = json_decode($str_json);
+$data = array("token" => $obj_x->{'token'});                                                                    
 $curl_post_data = json_encode($data); 
 curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json',));
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
