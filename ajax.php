@@ -1,3 +1,4 @@
+<?php
 //next example will insert new conversation
 $service_url = 'http://web-push.apphb.com/ajax.aspx';
 $curl = curl_init($service_url);
@@ -20,3 +21,4 @@ if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') 
 }
 echo 'response ok!';
 var_export($decoded->response);
+?>
