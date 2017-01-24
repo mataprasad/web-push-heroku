@@ -1,6 +1,6 @@
 <?php
 //next example will insert new conversation
-$service_url = 'http://web-push.apphb.com/ajax.aspx';
+$service_url = 'http://web-push.apphb.com/ajax.aspx/settoken';
 $curl = curl_init($service_url);
 $curl_post_data = array(
         'token' => 'test message'
