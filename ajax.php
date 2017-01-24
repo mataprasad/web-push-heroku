@@ -5,6 +5,8 @@ $curl = curl_init($service_url);
 $curl_post_data = array(
         'token' => 'test message'
 );
+$data = array("token" => "Hagrid");                                                                    
+$curl_post_data = json_encode($data); 
 curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json',));
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
