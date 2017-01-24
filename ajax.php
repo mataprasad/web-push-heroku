@@ -5,6 +5,7 @@ $curl = curl_init($service_url);
 $curl_post_data = array(
         'token' => 'test message'
 );
+curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json',));
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $curl_post_data);
