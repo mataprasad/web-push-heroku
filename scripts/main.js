@@ -34,6 +34,7 @@ messaging.onTokenRefresh(function () {
 /*------------private methods-------------*/
 
 function setTokenSentToServer(token) {
+    console.log(token);
     $.ajax({
         url: __GLOBAL_AJAX_BASE_URL + "/settoken",
         type: "POST",
